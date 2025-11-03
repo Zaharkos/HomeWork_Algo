@@ -6,7 +6,6 @@
 #include <string>
 #include <map>
 
-// --- Структура для хешування пар (місяць, день) ---
 struct hash_pair {
     template <class T1, class T2>
     size_t operator()(const std::pair<T1, T2>& p) const {
@@ -16,7 +15,6 @@ struct hash_pair {
     }
 };
 
-// --- РІШЕННЯ 1: "Базове" (std::vector) ---
 class Database_Vector {
 private:
     std::vector<Student> m_students;
@@ -64,7 +62,6 @@ public:
     }
 };
 
-// --- РІШЕННЯ 2: "Оптимізація Email" (vector + email_map) ---
 class Database_EmailMap {
 private:
     std::vector<Student> m_students;
@@ -96,7 +93,6 @@ public:
     }
 
     std::string op3_findGroupMaxSharedBirthday() {
-        // Логіка та сама, що у Рішенні 1
         std::map<std::string, std::map<std::pair<int, int>, int>> groupCounts;
         for (const auto& s : m_students) {
             groupCounts[s.m_group][{s.m_birth_month, s.m_birth_day}]++;
@@ -115,7 +111,6 @@ public:
     }
 };
 
-// --- РІШЕННЯ 3: "Повна Оптимізація" (vector + 2 maps) ---
 class Database_Optimized {
 private:
     std::vector<Student> m_students;
@@ -169,4 +164,5 @@ public:
     std::vector<Student>& getAllStudents() {
         return m_students;
     }
+
 };
