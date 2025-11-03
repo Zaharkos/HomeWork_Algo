@@ -51,7 +51,7 @@
 
 **Графік залежності продуктивності від розміру бази (N):**
 
-*(Сюди треба вставити графік `task2_performance.png`)*
+C:\Users\Захар\OneDrive\Desktop\lab_disass\task2_performance.pn
 ![Графік Продуктивності](task2_performance.png)
 
 **Висновки по продуктивності:**
